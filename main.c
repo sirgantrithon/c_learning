@@ -48,12 +48,20 @@ int main(void) {
   printf("sizeof(union): %lu\n", sizeof(n.u));
 
   printf("sizeof(int): %lu, sizeof(float): %lu, sizof(double): %lu, "
-         "sizeof(long double): %lu",
+         "sizeof(long double): %lu\n",
          sizeof(n2.inode), sizeof(n2.fnode), sizeof(n2.dnode),
          sizeof(n2.ldnode));
 
   bool bub = true;
   _Bool bubba = 0;
+
+  _BitInt(12) six_bit;
+
+  printf("sizeof(_BitInt(12)): %lu\n", sizeof(six_bit));
+
+  #if defined (__STD_IEC_559__)
+    puts("IEC_559");
+  #endif
 
   return EXIT_SUCCESS;
 }
