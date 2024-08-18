@@ -7,7 +7,7 @@ FILE=${1%.c}
 rm build/$FILE 2> /dev/null
 
 # Compile the file using the latest C options
-clang -std=c2x -o build/$FILE $FILE.c
+clang -Wall -Wextra -std=c2x -o build/$FILE $FILE.c
 
 # Run the binary
 ./build/$FILE

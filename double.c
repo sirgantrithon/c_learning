@@ -48,9 +48,9 @@ int main(void) {
   // [thang2] is equal to -5 by setting the raw parts
   inspector thang2;
   thang2.raw.sign = 1;
-  thang2.raw.exponent = 0b10000001;
-  thang2.raw.significand = 0b01100000000000000000000;
-  print_inspector(thang);
+  thang2.raw.exponent = 192;
+  thang2.raw.significand = 2097152;
+  print_inspector(thang2);
 
   return EXIT_SUCCESS;
 }
