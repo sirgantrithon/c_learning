@@ -17,5 +17,12 @@ int main(void) {
   }
 
   puts("We are good to go");
+
+  point->x = 0;
+  point->y = 0;
+  point->z = 10000;
+
+  printf("Point:\n\t x: %5d\n\t y: %5d\n\t z: %5d\n", point->x, point->y, point->z);
+
   return EXIT_SUCCESS;
 }
